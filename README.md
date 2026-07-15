@@ -106,7 +106,7 @@ Berikut adalah pratinjau dari fitur-fitur utama pada dasbor Admin dan Staff:
 
 ### Halaman Dashboard Admin
 
-![Dashboard Admin](dashboard_admin.jpeg)
+![Dashboard Admin](dashborad_admin.jpeg)
 
 ### Halaman Manajemen Kelola Reservasi
 

@@ -1,43 +1,54 @@
-# Kopi Senja - Admin & Staff Management System
+# Toko Kopi - Admin Dashboard
 
-Sistem manajemen reservasi, pemesanan, dan inventaris untuk Kopi Senja, dibangun menggunakan CodeIgniter 4.
+Ini adalah aplikasi untuk bagian admin Toko Kopi. Aplikasi ini berfungsi untuk manajemen menu, meja, reservasi, dan pengguna.
 
-## 🚀 Cara Install
+## Cara Instalasi
 
-1. _Clone repository ini_
-   Pastikan Anda telah menginstal Git, kemudian clone ke folder web server Anda (contoh: htdocs untuk XAMPP atau www untuk WAMP).
+Ikuti langkah-langkah berikut untuk menginstall dan menjalankan aplikasi:
 
-2. _Install Dependensi dengan Composer_
-   Buka terminal/command prompt di direktori project, lalu jalankan:
+1. _Clone Repository_
+   bash
+   git clone https://github.com/Nardo4577/toko_kopi_admin.git
+   cd toko_kopi_admin
+
+2. _Install Dependencies_
    bash
    composer install
 
-3. _Konfigurasi Environment_
-   - Copy file env menjadi .env.
-   - Buka file .env dan ubah environment menjadi development:
-     env
-     CI_ENVIRONMENT = development
-   - Konfigurasi koneksi database Anda di bagian database.default:
-     env
-     database.default.hostname = localhost
-     database.default.database = nama_database_anda
-     database.default.username = root
-     database.default.password =
-     database.default.DBDriver = MySQLi
+## Konfigurasi .env
 
-4. _Jalankan Migrasi Database dan Seeder_
-   Untuk membuat tabel beserta data awal, jalankan perintah berikut di terminal:
-   bash
-   php spark migrate
-   php spark db:seed KopiSenjaSeeder
+File .env tidak disertakan di GitHub karena berisi rahasia konfigurasi (Database dll). Anda harus membuatnya secara manual.
 
-5. _Jalankan Server Lokal_
-   Gunakan server bawaan CodeIgniter untuk menjalankan aplikasi:
-   bash
-   php spark serve
+- Salin file .env.example dan ubah namanya menjadi .env:
+  bash
+  cp .env.example .env
+- Buka file .env dan atur konfigurasi database, misalnya:
+  env
+  database.tests.database = toko_kopi
+  database.tests.username = root
+  database.tests.password =
 
-   Aplikasi dapat diakses melalui browser di alamat: http://localhost:8080
+## Migrations dan Seeder
+
+Pastikan Anda sudah membuat database kosong bernama toko_kopi. Jalankan perintah ini untuk membuat struktur database dan mengisi data awal (dummy):
+
+bash
+php spark migrate --all
+php spark db:seed App\\Database\\Seeds\\KopiSenjaSeeder
+
+## Akun Demo Admin
+
+Gunakan akun berikut untuk login dan menguji dashboard admin:
+
+- _Username: admin / \*\*Email_: admin@kopisenja.com
+- _Password_: admin123
 
 ---
 
-Dibuat menggunakan CodeIgniter 4
+## Screenshot Fitur Utama
+
+(Ganti teks dan path gambar di bawah ini dengan screenshot aplikasi Anda yang sebenarnya, misalnya halaman dashboard atau manajemen menu)
+
+### Halaman Dashboard Admin
+
+![Dashboard Admin](admin-dashboard.png)

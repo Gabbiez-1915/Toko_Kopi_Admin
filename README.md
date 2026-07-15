@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Kopi Senja - Admin & Staff Management System
 
 Sistem manajemen reservasi, pemesanan, dan inventaris untuk Kopi Senja, dibangun menggunakan CodeIgniter 4.
@@ -118,3 +119,6 @@ erDiagram
 
 ---
 *Dibuat menggunakan CodeIgniter 4*
+=======
+# Toko_Kopi_Admin
+>>>>>>> 8f633d12478ea638c95aa39fa8437efd6ff0c56f
